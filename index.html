@@ -1,283 +1,68 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AASHOP Camera</title>
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:#f5f5f5}
-
-/* TOP */
-.topbar{
-  background:#8b0000;
-  color:white;
-  padding:8px 40px;
-  display:flex;
-  justify-content:space-between;
-  font-size:14px;
-}
-
-/* HEADER */
-header{
-  background:white;
-  padding:20px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.logo{font-weight:bold;color:#c40000;font-size:22px}
-
-.search input{
-  padding:10px;
-  width:300px;
-  border:1px solid #ddd;
-  border-radius:20px;
-}
-
-/* NAV */
-.nav{
-  background:#c40000;
-  padding:12px 40px;
-  position:relative;
-}
-
-.nav a{
-  color:white;
-  margin-right:30px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-/* DROPDOWN */
-.dropdown{
-  position:relative;
-  display:inline-block;
-}
-
-.dropdown-menu{
-  display:none;
-  position:absolute;
-  background:white;
-  top:35px;
-  left:0;
-  width:220px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
-
-.dropdown-menu a{
-  display:block;
-  padding:12px;
-  color:#333;
-  border-bottom:1px solid #eee;
-}
-
-.dropdown:hover .dropdown-menu{
-  display:block;
-}
-
-/* BANNER */
-.banner{
-  height:400px;
-  background:url('https://images.unsplash.com/photo-1519183071298-a2962be96b6e') center/cover;
-}
-
-/* TITLE */
-.title{
-  text-align:center;
-  margin:40px 0;
-  color:#c40000;
-  font-size:22px;
-}
-
-/* CATEGORY */
-.categories{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  padding:0 40px 50px;
-}
-
-.cat{
-  position:relative;
-  overflow:hidden;
-}
-
-.cat img{
-  width:100%;
-  height:250px;
-  object-fit:cover;
-  transition:0.3s;
-}
-
-.cat:hover img{transform:scale(1.05)}
-
-.label{
-  position:absolute;
-  bottom:20px;
-  left:20px;
-  background:white;
-  padding:10px 20px;
-  text-align:center;
-}
-
-/* PRODUCTS */
-.products{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  padding:0 40px 60px;
-}
-
-.product{
-  background:white;
-  padding:15px;
-  text-align:center;
-  transition:0.3s;
-}
-
-.product:hover{
-  transform:translateY(-5px);
-  box-shadow:0 10px 20px rgba(0,0,0,0.1);
-}
-
-.product img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-
-.product h4{
-  margin:10px 0;
-}
-
-.price{
-  color:#c40000;
-  font-weight:bold;
-}
-
-.btn{
-  margin-top:10px;
-  padding:8px 15px;
-  background:#c40000;
-  color:white;
-  border:none;
-  cursor:pointer;
-}
-
-/* FOOTER */
-footer{
-  background:#111;
-  color:#aaa;
-  text-align:center;
-  padding:40px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .categories,.products{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-</style>
-</head>
-
-<body>
-
-<div class="topbar">
-  <div>📞 0975 152 816</div>
-  <div>08:00 - 17:00</div>
-</div>
-
-<header>
-  <div class="logo">AASHOP</div>
-  <div class="search">
-    <input placeholder="Tìm kiếm...">
-  </div>
-</header>
+<!-- MENU -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
 <div class="nav">
-  <a href="#">TRANG CHỦ</a>
-
-  <div class="dropdown">
+  <div class="menu-center">
+    <a href="#">TRANG CHỦ</a>
     <a href="#">SẢN PHẨM ▼</a>
-    <div class="dropdown-menu">
-      <a href="#">Dây đeo máy ảnh</a>
-      <a href="#">Túi máy ảnh</a>
-      <a href="#">Case máy ảnh</a>
-      <a href="#">Túi đựng lens</a>
-      <a href="#">Balo máy ảnh</a>
-      <a href="#">Hàng thanh lý</a>
-    </div>
+    <a href="#">TIN TỨC</a>
+    <a href="#">LIÊN HỆ</a>
   </div>
-
-  <a href="#">TIN TỨC</a>
-  <a href="#">LIÊN HỆ</a>
 </div>
 
-<div class="banner"></div>
+<style>
+.nav {
+  background: linear-gradient(180deg, #d40000, #a80000);
+  padding: 18px 0;
+  display: flex;
+  justify-content: center;
+}
 
-<h2 class="title">DANH MỤC SẢN PHẨM</h2>
+.menu-center {
+  display: flex;
+  gap: 60px;
+}
 
-<section class="categories">
-  <div class="cat">
-    <img src="https://images.unsplash.com/photo-1519183071298-a2962be96b6e">
-    <div class="label"><strong>DÂY ĐEO</strong><br>3 sản phẩm</div>
-  </div>
+/* LINK STYLE */
+.menu-center a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  position: relative;
 
-  <div class="cat">
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-    <div class="label"><strong>PHỤ KIỆN</strong><br>5 sản phẩm</div>
-  </div>
+  /* hiệu ứng 3D */
+  text-shadow:
+    0 1px 0 #900,
+    0 2px 0 #800,
+    0 3px 5px rgba(0,0,0,0.4);
 
-  <div class="cat">
-    <img src="https://images.unsplash.com/photo-1580894908361-967195033215">
-    <div class="label"><strong>TÚI LENS</strong><br>2 sản phẩm</div>
-  </div>
+  transition: 0.3s;
+}
 
-  <div class="cat">
-    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
-    <div class="label"><strong>TÚI MÁY ẢNH</strong><br>4 sản phẩm</div>
-  </div>
-</section>
+/* HOVER */
+.menu-center a:hover {
+  color: #ffd700;
+  transform: translateY(-2px) scale(1.05);
+  text-shadow:
+    0 2px 0 #b8860b,
+    0 4px 10px rgba(0,0,0,0.6);
+}
 
-<h2 class="title">SẢN PHẨM NỔI BẬT</h2>
+/* underline animation */
+.menu-center a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: #ffd700;
+  transition: 0.3s;
+}
 
-<section class="products">
-  <div class="product">
-    <img src="https://images.unsplash.com/photo-1519183071298-a2962be96b6e">
-    <h4>Dây đeo Artisan</h4>
-    <p class="price">850.000đ</p>
-    <button class="btn">Xem</button>
-  </div>
-
-  <div class="product">
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-    <h4>Dây vintage</h4>
-    <p class="price">650.000đ</p>
-    <button class="btn">Xem</button>
-  </div>
-
-  <div class="product">
-    <img src="https://images.unsplash.com/photo-1580894908361-967195033215">
-    <h4>Túi lens</h4>
-    <p class="price">500.000đ</p>
-    <button class="btn">Xem</button>
-  </div>
-
-  <div class="product">
-    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
-    <h4>Túi máy ảnh</h4>
-    <p class="price">1.200.000đ</p>
-    <button class="btn">Xem</button>
-  </div>
-</section>
-
-<footer>
-  © 2026 AASHOP - Camera Accessories
-</footer>
-
-</body>
-</html>
+.menu-center a:hover::after {
+  width: 100%;
+}
+</style>
