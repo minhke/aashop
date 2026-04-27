@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AASHOP Camera</title>
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial;background:#f5f5f5}
 
-/* TOP BAR */
+/* TOP */
 .topbar{
   background:#8b0000;
   color:white;
@@ -31,11 +31,7 @@ header{
   align-items:center;
 }
 
-.logo{
-  font-size:22px;
-  font-weight:bold;
-  color:#c40000;
-}
+.logo{font-size:22px;font-weight:bold;color:#c40000}
 
 .search input{
   padding:10px;
@@ -44,28 +40,21 @@ header{
   border:1px solid #ddd;
 }
 
-/* NAV (JAPAN STYLE) */
+/* NAV */
 .nav{
-  position:sticky;
-  top:0;
-  z-index:100;
   backdrop-filter:blur(12px);
   background:rgba(180,0,0,0.95);
-  border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
 .menu{
   display:flex;
   justify-content:center;
-  gap:70px;
+  gap:60px;
   padding:18px 0;
 }
 
 .menu a{
-  font-family:'Noto Sans JP',sans-serif;
-  font-size:16px;
-  font-weight:600;
-  letter-spacing:1px;
+  font-family:'Noto Sans JP';
   color:white;
   text-decoration:none;
   position:relative;
@@ -74,73 +63,116 @@ header{
 .menu a::after{
   content:"";
   position:absolute;
-  left:0;
   bottom:-6px;
+  left:0;
   width:0;
   height:2px;
   background:white;
-  transition:0.35s;
-}
-
-.menu a:hover::after{
-  width:100%;
-}
-
-.menu a.active::after{
-  width:100%;
-}
-
-/* DROPDOWN */
-.dropdown{position:relative}
-
-.dropdown-menu{
-  position:absolute;
-  top:45px;
-  left:-20px;
-  width:240px;
-  background:white;
-  border-radius:8px;
-  padding:10px 0;
-  opacity:0;
-  transform:translateY(10px);
-  pointer-events:none;
   transition:0.3s;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-.dropdown:hover .dropdown-menu{
+.menu a:hover::after{width:100%}
+
+/* ===== SLIDER XỊN ===== */
+.slider{
+  position:relative;
+  height:450px;
+  overflow:hidden;
+}
+
+.slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transition:opacity 1s ease;
+}
+
+.slide.active{
   opacity:1;
-  transform:translateY(0);
-  pointer-events:auto;
 }
 
-.dropdown-menu a{
-  display:block;
-  padding:12px 20px;
-  color:#222;
-  font-size:14px;
+/* IMAGE */
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-.dropdown-menu a:hover{
-  background:#f5f5f5;
-  padding-left:25px;
+/* OVERLAY TEXT */
+.caption{
+  position:absolute;
+  bottom:80px;
+  left:80px;
+  color:white;
 }
 
-/* BANNER */
-.banner{
-  height:400px;
-  background:url('https://images.unsplash.com/photo-1519183071298-a2962be96b6e') center/cover;
+.caption h2{
+  font-size:40px;
+  margin-bottom:10px;
 }
 
-/* TITLE */
+.caption p{
+  font-size:18px;
+}
+
+/* DARK OVERLAY */
+.slide::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.3);
+}
+
+/* BUTTON */
+.prev,.next{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.4);
+  color:white;
+  border:none;
+  font-size:30px;
+  padding:10px 15px;
+  cursor:pointer;
+}
+
+.prev{left:20px}
+.next{right:20px}
+
+/* DOT */
+.dots{
+  position:absolute;
+  bottom:20px;
+  width:100%;
+  text-align:center;
+}
+
+.dot{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  background:white;
+  margin:5px;
+  border-radius:50%;
+  opacity:0.5;
+  cursor:pointer;
+}
+
+.dot.active{
+  opacity:1;
+}
+
+/* CATEGORY */
 .title{
   text-align:center;
   margin:40px 0;
   color:#c40000;
-  font-size:22px;
 }
 
-/* CATEGORY */
 .categories{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -150,18 +182,12 @@ header{
 
 .cat{
   position:relative;
-  overflow:hidden;
 }
 
 .cat img{
   width:100%;
   height:250px;
   object-fit:cover;
-  transition:0.3s;
-}
-
-.cat:hover img{
-  transform:scale(1.05);
 }
 
 .label{
@@ -169,65 +195,15 @@ header{
   bottom:20px;
   left:20px;
   background:white;
-  padding:10px 20px;
-  text-align:center;
-}
-
-/* PRODUCTS */
-.products{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  padding:0 40px 60px;
-}
-
-.product{
-  background:white;
-  padding:15px;
-  text-align:center;
-  transition:0.3s;
-}
-
-.product:hover{
-  transform:translateY(-5px);
-  box-shadow:0 10px 20px rgba(0,0,0,0.1);
-}
-
-.product img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-
-.product h4{margin:10px 0}
-
-.price{
-  color:#c40000;
-  font-weight:bold;
-}
-
-.btn{
-  margin-top:10px;
-  padding:8px 15px;
-  background:#c40000;
-  color:white;
-  border:none;
-  cursor:pointer;
+  padding:10px;
 }
 
 /* FOOTER */
 footer{
   background:#111;
   color:#aaa;
-  text-align:center;
   padding:40px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .categories,.products{
-    grid-template-columns:repeat(2,1fr);
-  }
+  text-align:center;
 }
 </style>
 </head>
@@ -248,92 +224,109 @@ footer{
 
 <div class="nav">
   <div class="menu">
-
-    <a href="#" class="active">TRANG CHỦ</a>
-
-    <div class="dropdown">
-      <a href="#">SẢN PHẨM</a>
-      <div class="dropdown-menu">
-        <a href="#">Balo/Túi máy ảnh</a>
-        <a href="#">Dây đeo máy ảnh</a>
-        <a href="#">Case máy ảnh</a>
-        <a href="#">Túi đựng máy ảnh</a>
-        <a href="#">Hàng thanh lý</a>
-        <a href="#">Túi đựng lens</a>
-      </div>
-    </div>
-
+    <a href="#">TRANG CHỦ</a>
+    <a href="#">SẢN PHẨM</a>
     <a href="#">TIN TỨC</a>
     <a href="#">LIÊN HỆ</a>
-
   </div>
 </div>
 
-<div class="banner"></div>
+<!-- SLIDER -->
+<div class="slider">
+
+  <div class="slide active">
+    <img src="https://images.unsplash.com/photo-1519183071298-a2962be96b6e">
+    <div class="caption">
+      <h2>PHỤ KIỆN MÁY ẢNH</h2>
+      <p>Chính hãng - Cao cấp</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+    <div class="caption">
+      <h2>DÂY ĐEO CAO CẤP</h2>
+      <p>Thiết kế Nhật Bản</p>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1580894908361-967195033215">
+    <div class="caption">
+      <h2>TÚI MÁY ẢNH</h2>
+      <p>Bảo vệ tối đa</p>
+    </div>
+  </div>
+
+  <button class="prev" onclick="prev()">‹</button>
+  <button class="next" onclick="next()">›</button>
+
+  <div class="dots">
+    <span class="dot active" onclick="go(0)"></span>
+    <span class="dot" onclick="go(1)"></span>
+    <span class="dot" onclick="go(2)"></span>
+  </div>
+
+</div>
 
 <h2 class="title">DANH MỤC SẢN PHẨM</h2>
 
 <section class="categories">
-
   <div class="cat">
     <img src="https://images.unsplash.com/photo-1519183071298-a2962be96b6e">
-    <div class="label"><strong>KHUYẾN MÃI</strong><br>1 sản phẩm</div>
+    <div class="label">DÂY ĐEO</div>
   </div>
 
   <div class="cat">
     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-    <div class="label"><strong>PHỤ KIỆN KHÁC</strong><br>2 sản phẩm</div>
+    <div class="label">PHỤ KIỆN</div>
   </div>
 
   <div class="cat">
     <img src="https://images.unsplash.com/photo-1580894908361-967195033215">
-    <div class="label"><strong>TÚI LENS</strong><br>2 sản phẩm</div>
+    <div class="label">TÚI LENS</div>
   </div>
 
   <div class="cat">
     <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
-    <div class="label"><strong>TÚI MÁY ẢNH</strong><br>5 sản phẩm</div>
+    <div class="label">TÚI MÁY ẢNH</div>
   </div>
-
-</section>
-
-<h2 class="title">SẢN PHẨM NỔI BẬT</h2>
-
-<section class="products">
-
-  <div class="product">
-    <img src="https://images.unsplash.com/photo-1519183071298-a2962be96b6e">
-    <h4>Dây đeo Artisan</h4>
-    <p class="price">850.000đ</p>
-    <button class="btn">Xem</button>
-  </div>
-
-  <div class="product">
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-    <h4>Dây vintage</h4>
-    <p class="price">650.000đ</p>
-    <button class="btn">Xem</button>
-  </div>
-
-  <div class="product">
-    <img src="https://images.unsplash.com/photo-1580894908361-967195033215">
-    <h4>Túi lens</h4>
-    <p class="price">500.000đ</p>
-    <button class="btn">Xem</button>
-  </div>
-
-  <div class="product">
-    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
-    <h4>Túi máy ảnh</h4>
-    <p class="price">1.200.000đ</p>
-    <button class="btn">Xem</button>
-  </div>
-
 </section>
 
 <footer>
-  © 2026 AASHOP - Camera Accessories
+© 2026 AASHOP
 </footer>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let dots = document.querySelectorAll(".dot");
+let index = 0;
+
+function showSlide(i){
+  slides.forEach(s=>s.classList.remove("active"));
+  dots.forEach(d=>d.classList.remove("active"));
+
+  slides[i].classList.add("active");
+  dots[i].classList.add("active");
+}
+
+function next(){
+  index = (index+1)%slides.length;
+  showSlide(index);
+}
+
+function prev(){
+  index = (index-1+slides.length)%slides.length;
+  showSlide(index);
+}
+
+function go(i){
+  index = i;
+  showSlide(index);
+}
+
+setInterval(next,4000);
+</script>
 
 </body>
 </html>
