@@ -3,79 +3,150 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aashop</title>
+<title>Aashop - Dây đồng hồ cao cấp</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: 'Montserrat', sans-serif;
+  color: #111;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
+  padding: 20px 40px;
+  background: white;
   border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+}
+
+header h2 {
+  margin: 0;
+  font-weight: 600;
 }
 
 nav a {
-  margin-left: 20px;
+  margin-left: 25px;
   text-decoration: none;
-  color: black;
+  color: #111;
+  font-weight: 500;
 }
 
+/* HERO */
 .hero {
   height: 90vh;
   background: url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d') center/cover;
   display: flex;
   align-items: center;
-  padding-left: 50px;
+  padding: 0 60px;
   color: white;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 50px;
+  margin: 0;
 }
 
+.hero p {
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  margin-top: 15px;
+  border-radius: 6px;
+}
+
+/* SECTION */
 .section {
-  padding: 60px 30px;
+  padding: 70px 40px;
   text-align: center;
 }
 
+.section h2 {
+  margin-bottom: 40px;
+}
+
+/* PRODUCTS */
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  gap: 25px;
 }
 
 .card {
-  border: 1px solid #eee;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .card img {
   width: 100%;
 }
 
-.card div {
-  padding: 10px;
+.card-content {
+  padding: 15px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 15px;
-  background: black;
+.price {
+  color: #e60023;
+  font-weight: 600;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 20px;
+}
+
+.feature {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+/* FLOAT BUTTON */
+.floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.floating a {
+  display: block;
+  margin-top: 10px;
+  padding: 12px 18px;
+  border-radius: 50px;
   color: white;
   text-decoration: none;
-  margin-top: 10px;
 }
 
-footer {
-  background: black;
-  color: white;
-  padding: 20px;
-}
+.zalo { background: #25D366; }
+.mess { background: #0084FF; }
 
 </style>
 </head>
@@ -94,8 +165,8 @@ footer {
 <section class="hero">
   <div>
     <h1>Dây đồng hồ cao cấp</h1>
-    <p>Phong cách - Đẳng cấp</p>
-    <a class="btn">Xem ngay</a>
+    <p>Phong cách - Đẳng cấp - Cá tính</p>
+    <a class="btn">Xem sản phẩm</a>
   </div>
 </section>
 
@@ -103,29 +174,63 @@ footer {
   <h2>Sản phẩm nổi bật</h2>
 
   <div class="products">
+
     <div class="card">
       <img src="https://images.unsplash.com/photo-1523170335258-f5c6c6bd8b54">
-      <div>
-        <h3>Dây da</h3>
-        <p>500.000đ</p>
-        <a class="btn">Mua</a>
+      <div class="card-content">
+        <h3>Dây da cao cấp</h3>
+        <p class="price">500.000đ</p>
+        <a class="btn">Mua ngay</a>
       </div>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b">
-      <div>
+      <div class="card-content">
         <h3>Dây kim loại</h3>
-        <p>700.000đ</p>
-        <a class="btn">Mua</a>
+        <p class="price">700.000đ</p>
+        <a class="btn">Mua ngay</a>
       </div>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+      <div class="card-content">
+        <h3>Dây Apple Watch</h3>
+        <p class="price">650.000đ</p>
+        <a class="btn">Mua ngay</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
+<section class="section">
+  <h2>Tại sao chọn Aashop?</h2>
+
+  <div class="features">
+    <div class="feature">✔ Chất liệu cao cấp</div>
+    <div class="feature">✔ Bảo hành 6 tháng</div>
+    <div class="feature">✔ Giao hàng toàn quốc</div>
+    <div class="feature">✔ Đổi trả dễ dàng</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Đánh giá khách hàng</h2>
+  <p>⭐⭐⭐⭐⭐ Rất đẹp, chất lượng tốt</p>
+  <p>⭐⭐⭐⭐⭐ Giao hàng nhanh, đóng gói kỹ</p>
+</section>
+
 <footer>
-  <p>© Aashop</p>
+  <p>© 2026 Aashop</p>
+  <p>Liên hệ: 09xxxxxxxx</p>
 </footer>
+
+<div class="floating">
+  <a class="zalo" href="#">Zalo</a>
+  <a class="mess" href="#">Messenger</a>
+</div>
 
 </body>
 </html>
