@@ -2,13 +2,20 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AASHOP Camera</title>
 
 <style>
-body {
+/* RESET */
+* {
   margin: 0;
-  font-family: Arial;
-  background: #fff;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #f8f8f8;
   color: #111;
 }
 
@@ -16,78 +23,168 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
+  align-items: center;
+  padding: 20px 60px;
+  background: white;
   border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 20px;
 }
 
 .menu a {
-  margin: 0 15px;
+  margin: 0 20px;
   text-decoration: none;
   color: #111;
   font-weight: 500;
+  position: relative;
 }
 
-/* BANNER */
-.banner {
-  height: 400px;
-  background: url('https://images.unsplash.com/photo-1519183071298-a2962be96b6e') center/cover;
+.menu a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 520px;
+  background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 50px;
+  align-items: center;
+  padding-left: 80px;
   color: white;
 }
 
-.banner h1 {
-  font-size: 40px;
+.hero-content h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
 }
 
-.banner button {
-  width: 200px;
-  padding: 10px;
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-content button {
+  padding: 12px 25px;
   border: none;
   background: #d4af37;
-  color: black;
-  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-content button:hover {
+  background: black;
+  color: white;
+}
+
+/* SECTION TITLE */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 60px 0 30px;
 }
 
 /* CATEGORY */
 .categories {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 20px;
-  padding: 40px;
+  gap: 25px;
+  padding: 0 60px;
 }
 
 .cat {
-  background: #f5f5f5;
-  padding: 30px;
+  background: white;
+  padding: 40px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.cat:hover {
+  transform: translateY(-6px);
 }
 
 /* PRODUCTS */
 .products {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 20px;
-  padding: 40px;
+  gap: 25px;
+  padding: 0 60px 60px;
 }
 
 .product {
-  text-align: center;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .product img {
   width: 100%;
+  border-radius: 10px;
+}
+
+.product h4 {
+  margin: 10px 0 5px;
+}
+
+.price {
+  color: #d4af37;
+  font-weight: bold;
 }
 
 /* FOOTER */
 footer {
   background: #111;
-  color: white;
-  padding: 30px;
+  color: #aaa;
+  padding: 40px;
   text-align: center;
+  margin-top: 40px;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .menu {
+    margin-top: 10px;
+  }
+
+  .hero {
+    padding: 30px;
+    height: 400px;
+  }
+
+  .categories, .products {
+    grid-template-columns: repeat(2,1fr);
+    padding: 20px;
+  }
 }
 </style>
 </head>
@@ -95,7 +192,7 @@ footer {
 <body>
 
 <header>
-  <h2>AASHOP</h2>
+  <div class="logo">AASHOP</div>
   <div class="menu">
     <a href="#">Trang chủ</a>
     <a href="#">Lens</a>
@@ -104,46 +201,55 @@ footer {
   </div>
 </header>
 
-<div class="banner">
-  <h1>PHỤ KIỆN MÁY ẢNH CAO CẤP</h1>
-  <button>XEM SẢN PHẨM</button>
-</div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>PHỤ KIỆN MÁY ẢNH CAO CẤP</h1>
+    <p>Chính hãng - Giá tốt - Bảo hành uy tín</p>
+    <button>MUA NGAY</button>
+  </div>
+</section>
+
+<h2 class="section-title">Danh mục sản phẩm</h2>
 
 <section class="categories">
-  <div class="cat">Lens</div>
-  <div class="cat">Filter</div>
-  <div class="cat">Tripod</div>
-  <div class="cat">Storage</div>
+  <div class="cat">ỐNG KÍNH</div>
+  <div class="cat">FILTER</div>
+  <div class="cat">TRIPOD</div>
+  <div class="cat">THẺ NHỚ</div>
 </section>
+
+<h2 class="section-title">Sản phẩm nổi bật</h2>
 
 <section class="products">
   <div class="product">
-    <img src="https://via.placeholder.com/300">
-    <p>ND Filter</p>
-    <p>500.000đ</p>
+    <img src="https://images.unsplash.com/photo-1519183071298-a2962be96b6e">
+    <h4>ND Filter Pro</h4>
+    <p class="price">500.000đ</p>
   </div>
 
   <div class="product">
-    <img src="https://via.placeholder.com/300">
-    <p>Tripod</p>
-    <p>1.200.000đ</p>
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+    <h4>Tripod Carbon</h4>
+    <p class="price">1.200.000đ</p>
   </div>
 
   <div class="product">
-    <img src="https://via.placeholder.com/300">
-    <p>Pin Sony</p>
-    <p>300.000đ</p>
+    <img src="https://images.unsplash.com/photo-1519183071298-a2962be96b6e">
+    <h4>Pin Sony NP-FZ100</h4>
+    <p class="price">300.000đ</p>
   </div>
 
   <div class="product">
-    <img src="https://via.placeholder.com/300">
-    <p>SSD Samsung</p>
-    <p>2.000.000đ</p>
+    <img src="https://images.unsplash.com/photo-1580894908361-967195033215">
+    <h4>SSD Samsung T7</h4>
+    <p class="price">2.000.000đ</p>
   </div>
 </section>
 
 <footer>
-  © 2026 AASHOP - Camera Accessories
+  © 2026 AASHOP - Camera Accessories  
+  <br><br>
+  Hotline: 0909.xxx.xxx  
 </footer>
 
 </body>
