@@ -1,295 +1,255 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dây đeo máy ảnh cho Leica 2026</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dây đeo máy ảnh cho Leica — Hướng dẫn 2026</title>
 <style>
-body{
-  font-family: Arial, sans-serif;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  line-height: 1.7;
-  color:#222;
-  background:#fff;
-}
-
-h1{
-  margin-bottom: 10px;
-  font-size:28px;
-}
-
-h2{
-  margin-top: 30px;
-  color:#111;
-  font-size:20px;
-}
-
-h3{
-  margin-top:20px;
-  font-size:18px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
-  margin: 18px 0;
-}
-
-.gallery img{
-  width:100%;
-  height: auto;
-  display:block;
-  border-radius:6px;
-  object-fit:cover;
-  border:1px solid #eee;
-}
-
-.caption{
-  font-size:13px;
-  color:#555;
-  margin-top:6px;
-}
-
-ul{
-  padding-left:20px;
-}
-
-table{
-  width:100%;
-  border-collapse: collapse;
-  margin-top:20px;
-}
-
-table, th, td{
-  border:1px solid #ddd;
-}
-
-th, td{
-  padding:10px;
-  text-align:left;
-}
-
-th{
-  background:#f5f5f5;
-}
-
-a{
-  display:inline-block;
-  margin-top:20px;
-  color:#c40000;
-  text-decoration:none;
-  font-weight:bold;
-}
-.meta {
-  font-size:13px;
-  color:#666;
-  margin-bottom:10px;
-}
+  :root{--accent:#c40000;--bg:#fff;--muted:#666;--card:#f9f9f9}
+  body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:20px;background:var(--bg);color:#222;max-width:980px;margin-left:auto;margin-right:auto;line-height:1.7}
+  header{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-bottom:18px}
+  h1{font-size:26px;margin:0}
+  .meta{color:var(--muted);font-size:13px}
+  .lead{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;margin-bottom:18px}
+  .lead p{flex:1;min-width:260px;margin:0}
+  .lead .lead-img{width:360px;max-width:40%}
+  img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid #eee;object-fit:cover}
+  .caption{font-size:13px;color:var(--muted);margin-top:6px}
+  h2{margin-top:28px;margin-bottom:6px;color:#111;font-size:18px}
+  h3{margin-top:16px;margin-bottom:6px;font-size:16px}
+  ul{padding-left:20px;margin-top:6px}
+  table{width:100%;border-collapse:collapse;margin-top:12px}
+  th,td{border:1px solid #e6e6e6;padding:10px;text-align:left}
+  th{background:#fbfbfb}
+  a.cta{color:var(--accent);text-decoration:none;font-weight:bold}
+  .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+  figure{margin:0}
+  .two-col{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start}
+  @media(max-width:880px){.two-col{grid-template-columns:1fr}.lead .lead-img{max-width:100%;width:100%}}
+  /* modal */
+  .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);z-index:9999;padding:20px}
+  .modal.open{display:flex}
+  .modal-content{max-width:1100px;width:100%;max-height:90vh;overflow:auto;border-radius:8px}
+  .modal-content img{border-radius:6px}
+  .modal-close{position:absolute;top:18px;right:22px;color:#fff;font-size:22px;background:transparent;border:0;cursor:pointer}
+  .note{font-size:13px;color:var(--muted);margin-top:10px}
+  /* clickable images */
+  .clickable{cursor:pointer;transition:transform .12s ease}
+  .clickable:active{transform:scale(.995)}
 </style>
 </head>
-
 <body>
 
-<h1>Dây đeo máy ảnh cho Leica: Hướng dẫn chọn mua chi tiết 2026</h1>
+<header>
+  <div>
+    <h1>Dây đeo máy ảnh cho Leica — Hướng dẫn chọn 2026</h1>
+    <div class="meta">Cập nhật: 27 April 2026 · Tư vấn chọn chất liệu, kiểu gắn và mẫu phổ biến</div>
+  </div>
+</header>
 
-<p class="meta">Cập nhật: 27 April 2026</p>
+<main>
 
-<p>Khi sở hữu một chiếc Leica – biểu tượng của sự tối giản và chất lượng – việc chọn dây đeo máy ảnh không chỉ là phụ kiện, mà là một phần của trải nghiệm.</p>
+  <!-- Intro with inline image -->
+  <section class="lead">
+    <p>
+      Leica là biểu tượng tối giản của nhiếp ảnh — vì vậy dây đeo phải vừa bảo vệ thân máy, vừa hài hòa về thẩm mỹ và cảm giác khi dùng. Bài viết này tóm tắt tiêu chí chọn dây, so sánh vật liệu và gợi ý mẫu phù hợp từng dòng Leica.
+    </p>
+    <div class="lead-img">
+      <img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczMcjMMnyDd5YYVsWH5-2eLnbTv24fMlMPho19HTx23F1336GGUI0OyPC9aKh9bya4DKGFAfeZNVWoTjvzO4PmGYDT8OosljqDsApg7-n0o9vIxKtCyK0PsaK3tZodbfqxruYGiJUyhLxQ1gZRkI=w2978-h1986-s-no-gm?authuser=6" alt="Leica với dây lụa mỏng — phong cách tối giản." onclick="openModal(this)">
+      <div class="caption">Leica với dây lụa mỏng — phong cách tối giản.</div>
+    </div>
+  </section>
 
-<div class="gallery" aria-label="Bộ sưu tập dây đeo Leica">
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczMcjMMnyDd5YYVsWH5-2eLnbTv24fMlMPho19HTx23F1336GGUI0OyPC9aKh9bya4DKGFAfeZNVWoTjvzO4PmGYDT8OosljqDsApg7-n0o9vIxKtCyK0PsaK3tZodbfqxruYGiJUyhLxQ1gZRkI=w2978-h1986-s-no-gm?authuser=6" alt="Leica và dây đeo - hình 1">
-    <figcaption class="caption">Leica với dây lụa mỏng — phong cách tối giản.</figcaption>
-  </figure>
+  <!-- Why Leica users are picky -->
+  <section>
+    <h2>1. Vì sao người dùng Leica thường rất “kén” dây đeo</h2>
+    <div class="two-col">
+      <div>
+        <p>Leica có thân kim loại và hoàn thiện tinh xảo — mọi tiếp xúc thừa có thể gây xước hoặc làm giảm giá trị thẩm mỹ. Đồng thời, nhiều người dùng Leica chụp đường phố nên đeo liên tục; dây cần nhẹ, êm và bền.</p>
+        <ul>
+          <li>Thân máy kim loại dễ xước — tránh tiếp xúc trực tiếp, dùng miếng bảo vệ.</li>
+          <li>Đeo lâu cần giảm áp lực lên cổ và vai.</li>
+          <li>Phù hợp phong cách tối giản: màu và chất liệu phải tương xứng.</li>
+        </ul>
+      </div>
+      <aside>
+        <img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczOKGfkGQc4nplDSfNPwyNHeeVLK1LvHUft_bfckrKueaxyqYVGWdkQqCjv0UOeWbjrw5dO-dg1LJSBpsOFppXcPhA-ZIUxNg2adIF8gkiIHUGm1zFw45lQDin3Dh8zRgZq7U7A4MeisN1RUInbvIrY=w2784-h1856-s-no-gm?authuser=3" alt="Dây da cho Leica" onclick="openModal(this)">
+        <div class="caption">Dây da — cổ điển, bảo vệ tốt và lên patina.</div>
+      </aside>
+    </div>
+  </section>
 
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczOKGfkGQc4nplDSfNPwyNHeeVLK1LvHUft_bfckrKueaxyqYVGWdkQqCjv0UOeWbjrw5dO-dg1LJSBpsOFppXcPhA-ZIUxNg2adIF8gkiIHUGm1zFw45lQDin3Dh8zRgZq7U7A4MeisN1RUInbvIrY=w2784-h1856-s-no-gm?authuser=3" alt="Dây da cho Leica">
-    <figcaption class="caption">Dây da Ý / Tochigi — sang trọng và bền.</figcaption>
-  </figure>
+  <!-- Criteria -->
+  <section>
+    <h2>2. 4 tiêu chí chọn dây đeo Leica</h2>
 
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczM4I72Auyrp--QTHm8Bj2RdDYvCAHfp8E1c-itcIkRwQVLu96m4DiJFQfFGjZHGBPxLWtUKgzt8YUhk9HnC0SUjjfcpyMY4BlDdhN2HpykKpJmT9f-Lw9r7nFGsluda7r74fqJJi-FA-WQdvV-mSbc=w2784-h1856-s-no-gm?authuser=3" alt="Dây canvas">
-    <figcaption class="caption">Canvas / Slim & Soft — phong cách casual, bền.</figcaption>
-  </figure>
+    <h3>Chất liệu</h3>
+    <p>Chọn theo nhu cầu: lụa cho nhẹ, da cho thẩm mỹ lâu dài, canvas cho độ bền và giá hợp lý.</p>
+    <div class="gallery-grid">
+      <figure>
+        <img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczM4I72Auyrp--QTHm8Bj2RdDYvCAHfp8E1c-itcIkRwQVLu96m4DiJFQfFGjZHGBPxLWtUKgzt8YUhk9HnC0SUjjfcpyMY4BlDdhN2HpykKpJmT9f-Lw9r7nFGsluda7r74fqJJi-FA-WQdvV-mSbc=w2784-h1856-s-no-gm?authuser=3" alt="Dây canvas" onclick="openModal(this)">
+        <figcaption class="caption">Canvas — bền, phong cách casual.</figcaption>
+      </figure>
+      <figure>
+        <img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczNDeWHYluWGFxNUDsx9TOIfFRcW2O7ZUcCpYpianVRbQl1_FK76hxCtU9aDSopD4Cky88G_Wc9RoIFe7tsxaM8hhR5KocgXjK0sQV5bsC9FO-v6RwgAYqQ4DA0ZfGHhdP8m_FlSsrJyIW4K5k7UQhk=w2784-h1856-s-no-gm?authuser=3" alt="Dây lụa tròn" onclick="openModal(this)">
+        <figcaption class="caption">Lụa Nhật — siêu nhẹ, thoải mái khi đeo lâu.</figcaption>
+      </figure>
+      <figure>
+        <img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczOknRnHeE00nWXDfXeOe2-W5-dSwlZw1Lml-xfXYqR2xIS5KYt1x0xwTRzvUzzsza7ZxzgWvGEH6-zkTBb2Kaabl6_MsLS-O0uspJ7baoxAqMItVi60f9faCmZ2cRZd-3o5PotSDPxlepmaNOPlS70=w2784-h1856-s-no-gm?authuser=3" alt="Dây lụa dẹt" onclick="openModal(this)">
+        <figcaption class="caption">Lụa dẹt — cân bằng thẩm mỹ và tiện dụng.</figcaption>
+      </figure>
+    </div>
 
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczNDeWHYluWGFxNUDsx9TOIfFRcW2O7ZUcCpYpianVRbQl1_FK76hxCtU9aDSopD4Cky88G_Wc9RoIFe7tsxaM8hhR5KocgXjK0sQV5bsC9FO-v6RwgAYqQ4DA0ZfGHhdP8m_FlSsrJyIW4K5k7UQhk=w2784-h1856-s-no-gm?authuser=3" alt="Dây lụa tròn">
-    <figcaption class="caption">Dây lụa tròn — siêu nhẹ, phù hợp chụp đường phố.</figcaption>
-  </figure>
+    <h3>Trọng lượng & độ êm</h3>
+    <p>Máy nhẹ chọn dây mảnh; máy nặng (SL) ưu tiên dây bản rộng và lớp đệm.</p>
 
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczOknRnHeE00nWXDfXeOe2-W5-dSwlZw1Lml-xfXYqR2xIS5KYt1x0xwTRzvUzzsza7ZxzgWvGEH6-zkTBb2Kaabl6_MsLS-O0uspJ7baoxAqMItVi60f9faCmZ2cRZd-3o5PotSDPxlepmaNOPlS70=w2784-h1856-s-no-gm?authuser=3" alt="Dây lụa dẹt">
-    <figcaption class="caption">Dây lụa dẹt — chọn cho Leica M series.</figcaption>
-  </figure>
+    <h3>Cách gắn</h3>
+    <p>Chọn mắt nối có lớp bảo vệ, hoặc dùng chốt khóa nhanh tránh cọ xước thân máy.</p>
 
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczO-uZz_bzmlqMsK9C9ypzKxhGMTSWEA8s43b2hsGlyGnsaQrvz-GKflbCK87fkbDVZNhCbNt4pcty7M6Og9r7hf4nTlwnBBCHPIggFYMDKy5Lfac91yojIwLFJcXxRlkQ5UWf8XtwlRW9Y_bu1HP-I=w2782-h1856-s-no-gm?authuser=3" alt="Dây da Tochigi">
-    <figcaption class="caption">Da Tochigi — patina tự nhiên theo thời gian.</figcaption>
-  </figure>
+    <h3>Thẩm mỹ</h3>
+    <p>Đối với Leica, ưu tiên tông màu trung tính, đường may tinh tế và chi tiết kim loại không trầy.</p>
+  </section>
 
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczMuZ1L91uYM6M8oU8MQ3Ak6Iuey_Nk4rqkDYBrTlX9OZo3s_g08M1X3hom8Xq2p-Aaaq0dPGjRJGfDDPhhgeDe2aAi62Z6P7cfQuvW0fiiRdMOi6dplw8LYMKZ8tAhE98TnW6uDdmSGt1IumKyaw3o=w2784-h1856-s-no-gm?authuser=3" alt="Dây slim">
-    <figcaption class="caption">Slim & Soft — lựa chọn nhẹ nhàng, linh hoạt.</figcaption>
-  </figure>
+  <!-- Comparison -->
+  <section>
+    <h2>3. So sánh nhanh: Lụa — Da — Canvas</h2>
+    <table>
+      <tr><th>Tiêu chí</th><th>Lụa Nhật</th><th>Da thật</th><th>Canvas</th></tr>
+      <tr><td>Trọng lượng</td><td>Siêu nhẹ</td><td>Trung bình</td><td>Nhẹ</td></tr>
+      <tr><td>Độ êm</td><td>Tốt nhất</td><td>Tốt</td><td>Khá</td></tr>
+      <tr><td>Thẩm mỹ</td><td>Cao (tối giản)</td><td>Sang trọng</td><td>Hiện đại</td></tr>
+      <tr><td>Độ bền</td><td>Tốt</td><td>Rất tốt</td><td>Bền</td></tr>
+      <tr><td>Giá (tham khảo)</td><td>2.9 – 4.8 triệu</td><td>3 – 4.2 triệu</td><td>~1 – 2 triệu</td></tr>
+    </table>
+  </section>
 
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczPzTm-xJkWbdLxpR4K5PItDrR3NVwfVN4oteBmyRO_MuhaNykKucNxjB4nZh4GvrT4D_uCY82gYNS_sA_PT4FgiGF7ULcLLqFtKFksxBmb9Jdh-3cGBE2MQj5UKaIoJS3zp-4_p7DVS9ac-dHhlBfQ=w2782-h1856-s-no-gm?authuser=3" alt="Dây mẫu 8">
-    <figcaption class="caption">Mẫu phối tông tối — phù hợp phong cách cổ điển.</figcaption>
-  </figure>
+  <!-- Model suggestions with images inline -->
+  <section>
+    <h2>4. Gợi ý theo dòng Leica</h2>
 
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczPCVAPkLfIlgXifYsDx05F2E28iINNhxVMa2rfvY0xhtXZV0BMlVc9cwB2FBhfqNNEpnWZAso0fdWArxNYAA_T1iLoEwrc_myNXkRX_Cv26mF6r60HvFudASxukHjL5h-0gib8-XarqZtZEjxw138E=w2782-h1856-s-no-gm?authuser=3" alt="Dây mẫu 9">
-    <figcaption class="caption">Mẫu phối sáng — tương phản đẹp với body kim loại.</figcaption>
-  </figure>
+    <div style="display:grid;gap:12px">
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <div style="flex:1;min-width:200px">
+          <h3>Leica M10 / M11</h3>
+          <p>Dùng dây lụa dẹt hoặc da mảnh; ưu tiên tông đen, nâu sẫm hoặc xám để tôn hoàn thiện kim loại.</p>
+        </div>
+        <div style="width:280px">
+          <img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczO-uZz_bzmlqMsK9C9ypzKxhGMTSWEA8s43b2hsGlyGnsaQrvz-GKflbCK87fkbDVZNhCbNt4pcty7M6Og9r7hf4nTlwnBBCHPIggFYMDKy5Lfac91yojIwLFJcXxRlkQ5UWf8XtwlRW9Y_bu1HP-I=w2782-h1856-s-no-gm?authuser=3" alt="Da Tochigi" onclick="openModal(this)">
+          <div class="caption">Da Tochigi — phù hợp M series.</div>
+        </div>
+      </div>
 
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczPzJIF1Lu5c-2flzIMkQL1OqkvCrWNkOfXuG00a7F5vpaXUCHBNTwLYEJI21o1vYPldFt1D4KyywFxqlSJwPdjk04Rcpd7pWUcZYAmWOMkvWo3Ni3BGxriFygiPA2tds9qzIPrClXYiJjl3tBWlizs=w2782-h1856-s-no-gm?authuser=3" alt="Dây mẫu 10">
-    <figcaption class="caption">Mẫu đa năng — dễ phối đồ hằng ngày.</figcaption>
-  </figure>
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <div style="flex:1;min-width:200px">
+          <h3>Leica Q3</h3>
+          <p>Dây lụa mỏng là lựa chọn tối ưu cho sự nhẹ nhàng và di động.</p>
+        </div>
+        <div style="width:280px">
+          <img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczMuZ1L91uYM6M8oU8MQ3Ak6Iuey_Nk4rqkDYBrTlX9OZo3s_g08M1X3hom8Xq2p-Aaaq0dPGjRJGfDDPhhgeDe2aAi62Z6P7cfQuvW0fiiRdMOi6dplw8LYMKZ8tAhE98TnW6uDdmSGt1IumKyaw3o=w2784-h1856-s-no-gm?authuser=3" alt="Slim & Soft" onclick="openModal(this)">
+          <div class="caption">Slim & Soft — nhẹ và tinh tế.</div>
+        </div>
+      </div>
 
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczNnHPy3ybncW1mLv2f7_m3YS9wlnpB8bCRQIMlkDng7Wev3R8ox7sjrqX1uU0r6NajYsrTtTfEB6TBsmQqXiLpY4h6aJ_OXSXBUw-cLrEmwX7tHh4RT7Iu21pb4nS-WxFj345Sx31x58F28qdFL0qk=w2780-h1856-s-no-gm?authuser=3" alt="Dây mẫu 11">
-    <figcaption class="caption">Mẫu chi tiết — phô bày chất liệu và đường may.</figcaption>
-  </figure>
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <div style="flex:1;min-width:200px">
+          <h3>Leica SL</h3>
+          <p>Máy nặng, chọn dây bản rộng có đệm; ưu tiên da hoặc bản vải có lót.</p>
+        </div>
+        <div style="width:280px">
+          <img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczPzTm-xJkWbdLxpR4K5PItDrR3NVwfVN4oteBmyRO_MuhaNykKucNxjB4nZh4GvrT4D_uCY82gYNS_sA_PT4FgiGF7ULcLLqFtKFksxBmb9Jdh-3cGBE2MQj5UKaIoJS3zp-4_p7DVS9ac-dHhlBfQ=w2782-h1856-s-no-gm?authuser=3" alt="Mẫu cổ điển" onclick="openModal(this)">
+          <div class="caption">Mẫu bản rộng — phù hợp máy nặng.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <figure>
-    <img loading="lazy" src="https://lh3.googleusercontent.com/pw/AP1GczOWSjT_XJnPv07dl9RG80jnEU4tX6E6ipzU8l85_tYAAYHR5MR0jQ-0McmW14aaACl-1i1hQQWY0TfU9LVPM0D2hWcKQNZSiecGdHe-VrygLjXV9IyAN8obYgm8djL4-Ow2b-Wa2eJ0W_JNggXq2nk=w2780-h1856-s-no-gm?authuser=3" alt="Dây mẫu 12">
-    <figcaption class="caption">Bộ sưu tập đầy đủ — lựa chọn theo sở thích.</figcaption>
-  </figure>
+  <!-- Top sellers -->
+  <section>
+    <h2>5. Top dây đeo bán chạy (2026)</h2>
+    <ul>
+      <li>ACAM-301A – Dây lụa tròn</li>
+      <li>ACAM-310A – Dây lụa dẹt</li>
+      <li>ACAM-280LA – Dây da Ý</li>
+      <li>ACAM-287 – Da Tochigi</li>
+      <li>ACAM-100AA – Canvas</li>
+    </ul>
+
+    <div class="note">Mức giá và tính năng tham khảo — kiểm tra chi tiết trước khi mua.</div>
+  </section>
+
+  <!-- Gallery full -->
+  <section>
+    <h2>6. Bộ sưu tập mẫu</h2>
+    <div class="gallery-grid">
+      <figure><img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczPCVAPkLfIlgXifYsDx05F2E28iINNhxVMa2rfvY0xhtXZV0BMlVc9cwB2FBhfqNNEpnWZAso0fdWArxNYAA_T1iLoEwrc_myNXkRX_Cv26mF6r60HvFudASxukHjL5h-0gib8-XarqZtZEjxw138E=w2782-h1856-s-no-gm?authuser=3" alt="Mẫu 9" onclick="openModal(this)"><figcaption class="caption">Mẫu phối sáng</figcaption></figure>
+      <figure><img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczPzJIF1Lu5c-2flzIMkQL1OqkvCrWNkOfXuG00a7F5vpaXUCHBNTwLYEJI21o1vYPldFt1D4KyywFxqlSJwPdjk04Rcpd7pWUcZYAmWOMkvWo3Ni3BGxriFygiPA2tds9qzIPrClXYiJjl3tBWlizs=w2782-h1856-s-no-gm?authuser=3" alt="Mẫu 10" onclick="openModal(this)"><figcaption class="caption">Mẫu đa năng</figcaption></figure>
+      <figure><img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczNnHPy3ybncW1mLv2f7_m3YS9wlnpB8bCRQIMlkDng7Wev3R8ox7sjrqX1uU0r6NajYsrTtTfEB6TBsmQqXiLpY4h6aJ_OXSXBUw-cLrEmwX7tHh4RT7Iu21pb4nS-WxFj345Sx31x58F28qdFL0qk=w2780-h1856-s-no-gm?authuser=3" alt="Mẫu 11" onclick="openModal(this)"><figcaption class="caption">Mẫu chi tiết</figcaption></figure>
+      <figure><img class="clickable" loading="lazy" data-src="https://lh3.googleusercontent.com/pw/AP1GczOWSjT_XJnPv07dl9RG80jnEU4tX6E6ipzU8l85_tYAAYHR5MR0jQ-0McmW14aaACl-1i1hQQWY0TfU9LVPM0D2hWcKQNZSiecGdHe-VrygLjXV9IyAN8obYgm8djL4-Ow2b-Wa2eJ0W_JNggXq2nk=w2780-h1856-s-no-gm?authuser=3" alt="Mẫu 12" onclick="openModal(this)"><figcaption class="caption">Bộ sưu tập đầy đủ</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Kết luận</h2>
+    <p>Một dây đeo phù hợp cải thiện trải nghiệm chụp và bảo vệ chiếc Leica của bạn — chọn theo cân nặng máy, thói quen sử dụng và gu thẩm mỹ. Nếu muốn, tôi có thể rút gọn gallery xuống 4 ảnh nổi bật hoặc thêm placeholder ảnh nhỏ (LQIP) để tối ưu tốc độ.</p>
+
+    <p>👉 Xem toàn bộ sản phẩm tại: <a class="cta" href="https://aashop.vn/day-deo-may-anh/" target="_blank">aashop.vn/day-deo-may-anh/</a></p>
+  </section>
+
+  <p style="margin-top:18px"><a href="tintuc.html">← Quay lại trang tin tức</a></p>
+
+</main>
+
+<!-- Modal -->
+<div id="imgModal" class="modal" onclick="closeModal(event)">
+  <button class="modal-close" aria-label="Đóng" onclick="closeModal(event)">✕</button>
+  <div class="modal-content" id="modalContent" onclick="event.stopPropagation()"></div>
 </div>
 
-<p><strong>Ghi chú:</strong> tất cả ảnh đã được bố trí theo lưới để cân bằng hình ảnh và chú thích, giúp người đọc dễ so sánh trực quan.</p>
+<script>
+  // Lazy load enhancement: set src from data-src on intersection
+  (function(){
+    const imgs = document.querySelectorAll('img[loading="lazy"][data-src]');
+    const io = ('IntersectionObserver' in window) ? new IntersectionObserver((entries, obs)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const img = e.target;
+          img.src = img.dataset.src;
+          obs.unobserve(img);
+        }
+      });
+    },{rootMargin:'200px'}) : null;
+    imgs.forEach(img=>{
+      if(io) io.observe(img);
+      else img.src = img.dataset.src;
+    });
+  })();
 
-<h2>1. Vì sao người dùng Leica rất “kén” dây đeo?</h2>
-
-<ul>
-<li>Thân máy kim loại cao cấp, dễ xước nếu dây không phù hợp</li>
-<li>Thường dùng cho street photography → đeo lâu</li>
-<li>Yêu cầu cao về thẩm mỹ và phong cách</li>
-<li>Cần độ bền theo thời gian</li>
-</ul>
-
-<h2>2. 4 tiêu chí quan trọng khi chọn dây đeo Leica</h2>
-
-<h3>1. Chất liệu</h3>
-<ul>
-<li><strong>Lụa Nhật:</strong> siêu nhẹ, mềm mại, cao cấp</li>
-<li><strong>Da thật:</strong> sang trọng, lên patina đẹp</li>
-<li><strong>Canvas:</strong> bền, giá tốt, casual</li>
-</ul>
-
-<h3>2. Trọng lượng & độ êm</h3>
-<p>Chọn dây nhẹ nếu chụp lâu, dây bản rộng nếu máy nặng.</p>
-
-<h3>3. Cách gắn</h3>
-<p>Ưu tiên dây có lớp bảo vệ để tránh tiếp xúc trực tiếp với body Leica.</p>
-
-<h3>4. Thẩm mỹ</h3>
-<p>Dây đeo nên phù hợp phong cách tối giản, tinh tế của Leica.</p>
-
-<h2>3. So sánh 3 loại dây đeo phổ biến</h2>
-
-<h3>Dây lụa (Silk Strap)</h3>
-<ul>
-<li>Siêu nhẹ (~35g)</li>
-<li>Mềm, không mỏi cổ</li>
-<li>Nhiều màu sắc đẹp</li>
-<li>Phù hợp: Leica Q3, M11</li>
-</ul>
-
-<h3>Dây da cao cấp (Leather Strap)</h3>
-<ul>
-<li>Sang trọng, cổ điển</li>
-<li>Da lên màu đẹp theo thời gian (patina)</li>
-<li>Phù hợp: Leica M series</li>
-</ul>
-
-<h3>Dây Canvas / Slim & Soft</h3>
-<ul>
-<li>Bền, giá hợp lý</li>
-<li>Phong cách hiện đại</li>
-<li>Dễ phối đồ</li>
-</ul>
-
-<h2>4. Gợi ý chọn theo dòng Leica</h2>
-
-<ul>
-<li><strong>Leica M11 / M10:</strong> dây lụa dẹt hoặc da</li>
-<li><strong>Leica Q3:</strong> dây lụa mỏng</li>
-<li><strong>Leica SL:</strong> dây bản rộng</li>
-</ul>
-
-<h2>5. Top dây đeo bán chạy (2026)</h2>
-
-<ul>
-<li>ACAM-301A – Dây lụa tròn</li>
-<li>ACAM-310A – Dây lụa dẹt</li>
-<li>ACAM-280LA – Dây da Ý</li>
-<li>ACAM-287 – Da Tochigi</li>
-<li>ACAM-100AA – Canvas</li>
-</ul>
-
-<h2>6. Bảng so sánh nhanh</h2>
-
-<table>
-<tr>
-<th>Tiêu chí</th>
-<th>Lụa Nhật</th>
-<th>Da thật</th>
-<th>Canvas</th>
-</tr>
-
-<tr>
-<td>Trọng lượng</td>
-<td>Siêu nhẹ</td>
-<td>Trung bình</td>
-<td>Nhẹ</td>
-</tr>
-
-<tr>
-<td>Độ êm</td>
-<td>Tốt nhất</td>
-<td>Tốt</td>
-<td>Khá</td>
-</tr>
-
-<tr>
-<td>Thẩm mỹ</td>
-<td>Cao</td>
-<td>Sang trọng</td>
-<td>Hiện đại</td>
-</tr>
-
-<tr>
-<td>Độ bền</td>
-<td>Tốt</td>
-<td>Rất tốt</td>
-<td>Bền</td>
-</tr>
-
-<tr>
-<td>Giá</td>
-<td>2.9 – 4.8 triệu</td>
-<td>3 – 4.2 triệu</td>
-<td>~1 – 2 triệu</td>
-</tr>
-</table>
-
-<h2>Kết luận</h2>
-
-<p>Một dây đeo tốt không chỉ giúp bạn chụp ảnh thoải mái hơn mà còn giữ cho chiếc Leica luôn đẹp như mới.</p>
-
-<p>👉 Bạn đang dùng Leica dòng nào? Hãy chọn dây phù hợp với phong cách của bạn.</p>
-
-<p>👉 Xem toàn bộ sản phẩm tại:<br>
-<a href="https://aashop.vn/day-deo-may-anh/" target="_blank">https://aashop.vn/day-deo-may-anh/</a>
-</p>
-
-<a href="tintuc.html">← Quay lại trang tin tức</a>
+  // Modal open/close
+  function openModal(img){
+    const modal = document.getElementById('imgModal');
+    const content = document.getElementById('modalContent');
+    content.innerHTML = '';
+    const big = document.createElement('img');
+    big.src = img.dataset.src || img.src;
+    big.alt = img.alt || '';
+    content.appendChild(big);
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(e){
+    const modal = document.getElementById('imgModal');
+    if(e && e.type === 'click' && e.target.classList && e.target.classList.contains('modal-close')) {
+      // clicked close button
+    }
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    document.getElementById('modalContent').innerHTML = '';
+  }
+  // allow Esc to close
+  document.addEventListener('keydown', e=>{
+    if(e.key === 'Escape') closeModal(e);
+  });
+</script>
 
 </body>
 </html>
