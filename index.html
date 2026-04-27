@@ -1,139 +1,83 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aashop - Dây đồng hồ cao cấp</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aashop</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff;
-      color: #111;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background: white;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-bottom: 1px solid #eee;
+}
 
-    header h2 {
-      margin: 0;
-    }
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+}
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #111;
-      font-weight: 500;
-    }
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d') center/cover;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  color: white;
+}
 
-    .hero {
-      height: 80vh;
-      background: url('https://images.unsplash.com/photo-1518546305927-5a555bb7020d') center/cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 50px;
-      color: white;
-    }
+.hero h1 {
+  font-size: 48px;
+}
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
+.section {
+  padding: 60px 30px;
+  text-align: center;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background: black;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 15px;
-    }
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
 
-    .section {
-      padding: 60px 30px;
-      text-align: center;
-    }
+.card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-    .section h2 {
-      margin-bottom: 30px;
-    }
+.card img {
+  width: 100%;
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
+.card div {
+  padding: 10px;
+}
 
-    .card {
-      border-radius: 12px;
-      overflow: hidden;
-      transition: 0.3s;
-      border: 1px solid #eee;
-    }
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    }
+footer {
+  background: black;
+  color: white;
+  padding: 20px;
+}
 
-    .card img {
-      width: 100%;
-    }
-
-    .card-content {
-      padding: 15px;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
-      text-align: center;
-    }
-
-    .feature {
-      padding: 20px;
-      border: 1px solid #eee;
-      border-radius: 10px;
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .floating {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-    }
-
-    .floating a {
-      display: block;
-      margin-top: 10px;
-      padding: 12px 18px;
-      color: white;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .zalo { background: #25D366; }
-    .mess { background: #0084FF; }
-  </style>
+</style>
 </head>
 
 <body>
@@ -148,70 +92,40 @@
 </header>
 
 <section class="hero">
-  <h1>Dây đồng hồ cao cấp</h1>
-  <p>Phong cách - Chất lượng - Đẳng cấp</p>
-  <a class="btn" href="#">Xem ngay</a>
+  <div>
+    <h1>Dây đồng hồ cao cấp</h1>
+    <p>Phong cách - Đẳng cấp</p>
+    <a class="btn">Xem ngay</a>
+  </div>
 </section>
 
 <section class="section">
   <h2>Sản phẩm nổi bật</h2>
-  <div class="products">
 
+  <div class="products">
     <div class="card">
       <img src="https://images.unsplash.com/photo-1523170335258-f5c6c6bd8b54">
-      <div class="card-content">
-        <h3>Dây da cao cấp</h3>
+      <div>
+        <h3>Dây da</h3>
         <p>500.000đ</p>
-        <a class="btn" href="#">Mua ngay</a>
+        <a class="btn">Mua</a>
       </div>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b">
-      <div class="card-content">
+      <div>
         <h3>Dây kim loại</h3>
         <p>700.000đ</p>
-        <a class="btn" href="#">Mua ngay</a>
+        <a class="btn">Mua</a>
       </div>
     </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552">
-      <div class="card-content">
-        <h3>Dây Apple Watch</h3>
-        <p>650.000đ</p>
-        <a class="btn" href="#">Mua ngay</a>
-      </div>
-    </div>
-
   </div>
-</section>
-
-<section class="section">
-  <h2>Tại sao chọn Aashop?</h2>
-  <div class="features">
-    <div class="feature">✔ Chất liệu cao cấp</div>
-    <div class="feature">✔ Bảo hành 6 tháng</div>
-    <div class="feature">✔ Giao hàng toàn quốc</div>
-    <div class="feature">✔ Đổi trả dễ dàng</div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Khách hàng nói gì?</h2>
-  <p>⭐⭐⭐⭐⭐ Rất đẹp, chất lượng cao - Anh Minh</p>
-  <p>⭐⭐⭐⭐⭐ Giao hàng nhanh, đóng gói kỹ - Chị Lan</p>
 </section>
 
 <footer>
-  <p>© 2026 Aashop</p>
-  <p>Liên hệ: 090xxxxxxx</p>
+  <p>© Aashop</p>
 </footer>
-
-<div class="floating">
-  <a class="zalo" href="#">Chat Zalo</a>
-  <a class="mess" href="#">Messenger</a>
-</div>
 
 </body>
 </html>
