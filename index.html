@@ -6,155 +6,126 @@
 <title>AASHOP Camera</title>
 
 <style>
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: Arial;
 }
 
 body {
-  background: #f8f8f8;
-  color: #111;
+  background: #f5f5f5;
+}
+
+/* TOP BAR */
+.topbar {
+  background: #8b0000;
+  color: white;
+  padding: 8px 40px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* HEADER */
 header {
+  background: white;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-  background: white;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
 }
 
 .logo {
+  font-size: 22px;
   font-weight: bold;
-  letter-spacing: 3px;
-  font-size: 20px;
+  color: #c40000;
 }
 
-.menu a {
-  margin: 0 20px;
-  text-decoration: none;
-  color: #111;
-  font-weight: 500;
-  position: relative;
+.search {
+  width: 40%;
 }
 
-.menu a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #d4af37;
-  left: 0;
-  bottom: -5px;
-  transition: 0.3s;
-}
-
-.menu a:hover::after {
+.search input {
   width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
 }
 
-/* HERO */
-.hero {
-  height: 520px;
-  background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover;
-  display: flex;
-  align-items: center;
-  padding-left: 80px;
+/* MENU */
+.nav {
+  background: #c40000;
+  padding: 12px 40px;
+}
+
+.nav a {
   color: white;
-}
-
-.hero-content h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.hero-content button {
-  padding: 12px 25px;
-  border: none;
-  background: #d4af37;
-  cursor: pointer;
+  margin-right: 30px;
+  text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
 }
 
-.hero-content button:hover {
-  background: black;
-  color: white;
+/* BANNER */
+.banner {
+  width: 100%;
+  height: 400px;
+  background: url('https://images.unsplash.com/photo-1519183071298-a2962be96b6e') center/cover;
 }
 
-/* SECTION TITLE */
+/* TITLE */
 .section-title {
   text-align: center;
-  font-size: 28px;
-  margin: 60px 0 30px;
+  margin: 40px 0;
+  font-size: 22px;
+  color: #c40000;
+  font-weight: bold;
 }
 
-/* CATEGORY */
+/* CATEGORY GRID */
 .categories {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 25px;
-  padding: 0 60px;
+  gap: 20px;
+  padding: 0 40px 60px;
 }
 
 .cat {
-  background: white;
-  padding: 40px;
-  text-align: center;
-  font-weight: 600;
-  border-radius: 10px;
-  transition: 0.3s;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.cat:hover {
-  transform: translateY(-6px);
-}
-
-/* PRODUCTS */
-.products {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 25px;
-  padding: 0 60px 60px;
-}
-
-.product {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.product:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.product img {
+.cat img {
   width: 100%;
-  border-radius: 10px;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.3s;
 }
 
-.product h4 {
-  margin: 10px 0 5px;
+.cat:hover img {
+  transform: scale(1.05);
 }
 
-.price {
-  color: #d4af37;
-  font-weight: bold;
+/* LABEL */
+.cat-label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.cat-label strong {
+  display: block;
+  font-size: 16px;
+}
+
+.cat-label span {
+  font-size: 12px;
+  color: #666;
 }
 
 /* FOOTER */
@@ -163,27 +134,16 @@ footer {
   color: #aaa;
   padding: 40px;
   text-align: center;
-  margin-top: 40px;
 }
 
 /* MOBILE */
-@media(max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
-  .menu {
-    margin-top: 10px;
-  }
-
-  .hero {
-    padding: 30px;
-    height: 400px;
-  }
-
-  .categories, .products {
+@media(max-width: 768px){
+  .categories {
     grid-template-columns: repeat(2,1fr);
-    padding: 20px;
+  }
+
+  .search {
+    display: none;
   }
 }
 </style>
@@ -191,65 +151,72 @@ footer {
 
 <body>
 
+<!-- TOP -->
+<div class="topbar">
+  <div>📞 0975 152 816</div>
+  <div>⏰ 08:00 - 17:00</div>
+</div>
+
+<!-- HEADER -->
 <header>
   <div class="logo">AASHOP</div>
-  <div class="menu">
-    <a href="#">Trang chủ</a>
-    <a href="#">Lens</a>
-    <a href="#">Filter</a>
-    <a href="#">Phụ kiện</a>
+  <div class="search">
+    <input placeholder="Tìm kiếm...">
   </div>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>PHỤ KIỆN MÁY ẢNH CAO CẤP</h1>
-    <p>Chính hãng - Giá tốt - Bảo hành uy tín</p>
-    <button>MUA NGAY</button>
-  </div>
-</section>
+<!-- NAV -->
+<div class="nav">
+  <a href="#">TRANG CHỦ</a>
+  <a href="#">SẢN PHẨM</a>
+  <a href="#">TIN TỨC</a>
+  <a href="#">LIÊN HỆ</a>
+</div>
 
-<h2 class="section-title">Danh mục sản phẩm</h2>
+<!-- BANNER -->
+<div class="banner"></div>
+
+<!-- CATEGORY -->
+<h2 class="section-title">DANH MỤC SẢN PHẨM</h2>
 
 <section class="categories">
-  <div class="cat">ỐNG KÍNH</div>
-  <div class="cat">FILTER</div>
-  <div class="cat">TRIPOD</div>
-  <div class="cat">THẺ NHỚ</div>
-</section>
 
-<h2 class="section-title">Sản phẩm nổi bật</h2>
-
-<section class="products">
-  <div class="product">
+  <div class="cat">
     <img src="https://images.unsplash.com/photo-1519183071298-a2962be96b6e">
-    <h4>ND Filter Pro</h4>
-    <p class="price">500.000đ</p>
+    <div class="cat-label">
+      <strong>KHUYẾN MÃI</strong>
+      <span>1 SẢN PHẨM</span>
+    </div>
   </div>
 
-  <div class="product">
+  <div class="cat">
     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-    <h4>Tripod Carbon</h4>
-    <p class="price">1.200.000đ</p>
+    <div class="cat-label">
+      <strong>PHỤ KIỆN KHÁC</strong>
+      <span>2 SẢN PHẨM</span>
+    </div>
   </div>
 
-  <div class="product">
-    <img src="https://images.unsplash.com/photo-1519183071298-a2962be96b6e">
-    <h4>Pin Sony NP-FZ100</h4>
-    <p class="price">300.000đ</p>
-  </div>
-
-  <div class="product">
+  <div class="cat">
     <img src="https://images.unsplash.com/photo-1580894908361-967195033215">
-    <h4>SSD Samsung T7</h4>
-    <p class="price">2.000.000đ</p>
+    <div class="cat-label">
+      <strong>TÚI ĐỰNG LENS</strong>
+      <span>2 SẢN PHẨM</span>
+    </div>
   </div>
+
+  <div class="cat">
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+    <div class="cat-label">
+      <strong>TÚI ĐỰNG MÁY ẢNH</strong>
+      <span>5 SẢN PHẨM</span>
+    </div>
+  </div>
+
 </section>
 
 <footer>
-  © 2026 AASHOP - Camera Accessories  
-  <br><br>
-  Hotline: 0909.xxx.xxx  
+  © 2026 AASHOP - Camera Accessories
 </footer>
 
 </body>
